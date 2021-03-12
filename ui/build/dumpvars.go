@@ -139,7 +139,7 @@ func dumpMakeVars(ctx Context, config Config, goals, vars []string, write_soong_
 var BannerVars = []string{
 	"PLATFORM_VERSION_CODENAME",
 	"PLATFORM_VERSION",
-	"LEGION_VERSION",
+	"DELUXE_VERSION",
 	"TARGET_PRODUCT",
 	"TARGET_BUILD_VARIANT",
 	"TARGET_BUILD_TYPE",
@@ -173,10 +173,10 @@ func Banner(make_vars map[string]string) string {
 	b := &bytes.Buffer{}
 
 	fmt.Fprintln(b, "***********************************************************************")
-	fmt.Fprintln(b, "*       Welcome to LEGIONOS-R Building Environment:)        *")
+	fmt.Fprintln(b, "*       Welcome to DeluxeOS   Building Environment:)        *")
 	fmt.Fprintln(b, "*       --------------------------------------------        *")
 	fmt.Fprintln(b, "***********************************************************************")
-	fmt.Fprintf(b, "%s=%s\n", "LEGION_VERSION", make_vars["LEGION_VERSION"])
+	fmt.Fprintf(b, "%s=%s\n", "DELUXE_VERSION", make_vars["DELUXE_VERSION"])
 	fmt.Fprintf(b, "%s=%s\n", "PLATFORM_VERSION_CODENAME", make_vars["PLATFORM_VERSION_CODENAME"])
 	fmt.Fprintf(b, "%s=%s\n", "PLATFORM_VERSION", make_vars["PLATFORM_VERSION"])
 	fmt.Fprintf(b, "%s=%s\n", "TARGET_PRODUCT", make_vars["TARGET_PRODUCT"])
